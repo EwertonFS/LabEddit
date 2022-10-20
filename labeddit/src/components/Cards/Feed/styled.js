@@ -13,7 +13,9 @@ margin-top:1em;
 
 export const ButtonContainer= styled.div`
 display:flex; 
-justify-content:space-around;
+flex-direction: row;
+justify-content: space-between;
+
 `
 
 

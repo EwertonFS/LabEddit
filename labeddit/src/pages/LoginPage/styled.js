@@ -19,7 +19,15 @@ margin-top: 15vh;
 export const InputsContainer = styled.div`
 display:flex;
 flex-direction:column;
-max-width:450px;
 align-items:center;
-margin-bottom:20px;
+max-width:60vw;
+max-width:350px;
 `
+
+export const SignUpButtonPage = styled.div`
+width:350px;
+max-width:60vw;
+margin-bottom:18em;
+`
+
+
