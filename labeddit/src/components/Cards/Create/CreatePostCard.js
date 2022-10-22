@@ -5,12 +5,16 @@ import Typography from "@mui/material/Typography";
 import { MiniCardPostContainer, PostButton } from "./styled";
 
 const CreatePostCard = () => {
+ 
+  
+  
+  
   return (
       <MiniCardPostContainer>
     <Card sx={{ maxWidth: 350 }} >
       
       <Typography gutterBottom variant="p5" component="div" align="center" >
-        Lizard
+       <p>lizars</p>
       </Typography>
       <CardMedia
         component="img"

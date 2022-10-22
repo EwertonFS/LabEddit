@@ -5,8 +5,10 @@ import { CardContainer } from "./styled";
 import InteractFeedNews from "../../components/Cards/Feed/InteractFeedNews";
 
 const PostPage = () => {
+ 
+ 
   return (
-
+      
     
     <>
       <SearchAppBar />

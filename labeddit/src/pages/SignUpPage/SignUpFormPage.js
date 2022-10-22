@@ -15,10 +15,22 @@ const SignUpFormPage = () => {
     handleSignup() 
   };
   // o body é o form
+  
   const handleSignup = () =>{
     axios.post(`${BASE_URL}/users/signup`,form)
-    .then((res)=> console.log(res))
-    .catch((err)=> console.log(err))
+    .then((res) => {
+      localStorage.setItem("token", res.data.token);
+      alert("Cadastro realizado com sucesso!!")
+      clear()
+            
+  })
+  .catch((error) => {
+      alert("Algo está errado, tente novamente!")
+      console.log(error.res);        
+  })
+   
+    // .then((res)=> console.log(res))
+    // .catch((err)=> console.log(err))
   
  
 }
