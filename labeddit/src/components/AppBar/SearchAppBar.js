@@ -11,8 +11,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import { LogoImage } from './styled'; 
 import Logo from '../../assets/image/RoboAzulClaro.png'
 import { Link } from 'react-router-dom';
-
-
+import LoginIcon from '@mui/icons-material/Login';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -56,7 +56,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
+
+
 export default function SearchAppBar() {
+
+  
+
+
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -77,15 +85,20 @@ export default function SearchAppBar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
+            <StyledInputBase  
               placeholder="Search LabEdit"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
-          <Link to={'/login'}><IconButton > Login</IconButton></Link>
-          <Link to={'/cadastrar'}><IconButton> Cadastrar</IconButton></Link>
+          <Link to={'/login'}>
+            <IconButton size="small" >
+              login
+              <LoginIcon />
+            </IconButton>
+            </Link>
+          <Link to={'/cadastrar'}><IconButton size="small"> Signup<AppRegistrationIcon/></IconButton></Link>
 
-
+            
           <AccountCircle />
         </Toolbar>
       </AppBar>

@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { MiniCardPostContainer, PostButton } from "./styled";
 
-const CreatePostCard = () => {
+const CreatePostCard = (props) => {
  
   
   
@@ -14,7 +14,7 @@ const CreatePostCard = () => {
     <Card sx={{ maxWidth: 350 }} >
       
       <Typography gutterBottom variant="p5" component="div" align="center" >
-       <p>lizars</p>
+       <p>{props.post.title}</p>
       </Typography>
       <CardMedia
         component="img"

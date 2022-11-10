@@ -4,21 +4,46 @@ import { ContainerLoginPage, InputsContainer } from "./styled";
 import useForm from "../../hooks/useform";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
+import { Link, useNavigate} from "react-router-dom";
+
 
 const LoginForm = () => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
+  let navigate = useNavigate()
   const onSubmitForm = (event) => {
     event.preventDefault();
     console.log(form);
+    Login()
+    navigate('/')
+    
+    
   };
 
   //faremos a requisição agora
-  
+  // axios.post(`${BASE_URL}/users/login`,form)
+  //   .then((res)=> console.log)
+  //   .catch((err)=> console.log)
   const Login = () =>{
-    axios.post(`${BASE_URL}/users/login`,form)
-    .then((res)=> console.log)
-    .catch((err)=> console.log)
+    const axios = require("axios");
+
+    const options = {
+    method: 'POST',
+    url: 'https://logintesting.p.rapidapi.com/login',
+    headers: {
+    'content-type': 'application/json',
+    Authentication: 'header',
+    'X-RapidAPI-Key': 'aff209994bmsh2f9e8344d0e4802p11ef80jsn3b93d61695ed',
+    'X-RapidAPI-Host': 'logintesting.p.rapidapi.com'
+  },
+  data: '{"username":"tung1234","password":"tu1234556"}'
+};
+
+axios.request(options,form).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
   
  
 }
@@ -49,7 +74,7 @@ const LoginForm = () => {
             required
             type={"password"}
           />
-
+          
           <Button
             type={"submit"}
             fullWidth
@@ -57,8 +82,9 @@ const LoginForm = () => {
             color={"secondary"}
             margin="normal"
           >
-            Cadastrar
+            Acesse
           </Button>
+          
         </form>
       </InputsContainer>
     </ContainerLoginPage>

@@ -1,46 +1,58 @@
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
-import {  ContainerSignUpFormPage, InputsContainer } from "./styled";
+import { ContainerSignUpFormPage, InputsContainer } from "./styled";
 import useForm from "../../hooks/useform";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
-
+import { Link } from "react-router-dom";
 
 const SignUpFormPage = () => {
-  const [form, onChange, clear] = useForm({ name:"",email: "", password: "" });
+  const [form, onChange, clear] = useForm({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const onSubmitForm = (event) => {
     event.preventDefault();
     // console.log(form);
-    handleSignup() 
-  };
+    // handleSignup();
+    
+   };
   // o body é o form
-  
-  const handleSignup = () =>{
-    axios.post(`${BASE_URL}/users/signup`,form)
-    .then((res) => {
-      localStorage.setItem("token", res.data.token);
-      alert("Cadastro realizado com sucesso!!")
-      clear()
-            
-  })
-  .catch((error) => {
-      alert("Algo está errado, tente novamente!")
-      console.log(error.res);        
-  })
+
+  const pegaSignuo = () => {
    
-    // .then((res)=> console.log(res))
-    // .catch((err)=> console.log(err))
   
- 
-}
+
+
+  }
+
+  // const handleSignup = () => {
+  // Api com problema
+  //   axios
+  //     .post(`BASE_URL`, form)
+  //     .then((res) => {
+  //       console.log(res);
+  //       // localStorage.setItem("token", res.data.token);
+  //       // alert("Cadastro realizado com sucesso!!")
+  //       // clear()
+  //     })
+  //     .catch((error) => {
+  //       alert("Algo está errado, tente novamente!");
+  //       console.log(error.res);
+  //     });
+
+  //   // .then((res)=> console.log(res))
+  //   // .catch((err)=> console.log(err))
+  // };
 
   return (
     <div>
       <ContainerSignUpFormPage>
         <InputsContainer>
           <form onSubmit={onSubmitForm}>
-          <TextField
+            <TextField
               name="name"
               value={form.name}
               onChange={onChange}
@@ -73,7 +85,7 @@ const SignUpFormPage = () => {
               required
               type={"password"}
             />
-
+            <Link to={'/login'}>
             <Button
               type={"submit"}
               fullWidth
@@ -83,6 +95,7 @@ const SignUpFormPage = () => {
             >
               Acessar
             </Button>
+            </Link>
           </form>
         </InputsContainer>
       </ContainerSignUpFormPage>
