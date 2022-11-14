@@ -59,7 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
 
   
 
@@ -88,6 +88,9 @@ export default function SearchAppBar() {
             <StyledInputBase  
               placeholder="Search LabEdit"
               inputProps={{ 'aria-label': 'search' }}
+             value={props.search}
+             onChange={props.changeSearch}
+              
             />
           </Search>
           <Link to={'/login'}>
