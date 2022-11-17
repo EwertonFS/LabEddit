@@ -13,16 +13,29 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { MiniCardFeedContainer } from './styled';
-
+import { pink } from '@mui/material/colors';
+import { useState } from 'react';
 
 
 
 const InteractFeedNews = (props) => {
  
-  
+  const [heart, setHeart]=useState(false)
 
-  
+
+  const changeHeartColor = () => {
+    if(heart === false){
+      return setHeart(true)
+      
+    }
+  }
  
+  const changeHeartNoColor = () => {
+    if(heart === true){
+      return setHeart(false)
+    }
+  }
+
  
  
   return (
@@ -56,9 +69,19 @@ const InteractFeedNews = (props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
+        
+
+        {heart===false ? (
+
+          <IconButton aria-label="add to favorites"  >
+            <FavoriteIcon onClick={changeHeartColor} />
+          </IconButton>):
+        (
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon onClick={changeHeartNoColor}sx={{ color: pink[500]}}/>
+          </IconButton>
+        )}
+
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>

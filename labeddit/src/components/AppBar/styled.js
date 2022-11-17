@@ -9,3 +9,10 @@ border-radius:50%;
 export const ContainerAppBar = styled.img`
 position:absolute;
 `
+
+// export const Bars = styled.div`
+// @media screen and (max-width: 390px) {
+    
+// `
+ 
+  

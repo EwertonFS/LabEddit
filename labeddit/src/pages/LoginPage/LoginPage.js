@@ -3,8 +3,9 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/image/RoboAzulClaro.png";
 import LoginForm from "./LoginForm";
-import { ContainerLoginPage,LogoImg, SignUpButtonPage,} from "./styled";
-
+import { ButtonBack, ContainerLoginPage,LogoImg, SignUpButtonPage,} from "./styled";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { ButtonBase } from "@mui/material";
 
 const LoginPage = () => {
   
@@ -13,8 +14,12 @@ const LoginPage = () => {
     <ContainerLoginPage>
       <LogoImg src={Logo} />
       <p>Seja Bem vindo a maior Rede Social do Mundo</p>
-      <LoginForm />
 
+      {/* <ButtonBack>
+        <ArrowBackIcon />
+      </ButtonBack> */}
+      <LoginForm />
+        
       <SignUpButtonPage>
         <Link to={'/cadastrar'}>
         <Button

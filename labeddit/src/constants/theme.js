@@ -12,6 +12,11 @@ export const theme = createTheme({
       contrastText: "#ffcc00"
 
     },
+    third: {
+      main: "#000000",
+      contrastText: "#a8d5e5"
+
+    }
   },
 });
 

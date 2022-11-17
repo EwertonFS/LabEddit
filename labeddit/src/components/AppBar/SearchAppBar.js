@@ -15,6 +15,7 @@ import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import TocIcon from "@mui/icons-material/Toc"
 import { ButtonBase } from '@mui/material';
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -23,7 +24,7 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '100%',
+  width: '13%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
     width: 'auto',
@@ -74,9 +75,9 @@ export default function SearchAppBar(props) {
             <LogoImage src={Logo}></LogoImage>
 
           </IconButton>
-          <ButtonBase>
+          {/* <ButtonBase>
           <TocIcon  />
-        </ButtonBase>
+        </ButtonBase> */}
           <Typography
             variant="h6"
             noWrap
@@ -90,7 +91,7 @@ export default function SearchAppBar(props) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase  
-              placeholder="Search LabEdit"
+              placeholder="Search"
               inputProps={{ 'aria-label': 'search' }}
              value={props.search}
              onChange={props.changeSearch}

@@ -29,5 +29,11 @@ width:350px;
 max-width:60vw;
 margin-bottom:18em;
 `
-
+export const ButtonBack = styled.button`
+display:flex;
+flex-direction:row;
+align-items:left;
+justify-content:left;
+margin-left:0;
+`
 
