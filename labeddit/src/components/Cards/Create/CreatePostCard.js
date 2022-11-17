@@ -1,40 +1,39 @@
+import * as React from "react";
+import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { MiniCardPostContainer, PostButton } from "./styled";
+import { MiniCardPostContainer } from "./styled";
+import { ButtonBase, TextField } from "@mui/material";
+import AddBoxIcon from '@mui/icons-material/AddBox';
+
+
 
 const CreatePostCard = (props) => {
- 
-  
-  
-  
-  return (
-      <MiniCardPostContainer>
-    <Card sx={{ maxWidth: 350 }} >
-      
-      <Typography gutterBottom variant="p5" component="div" align="center" >
-       <p>{props.post.title}</p>
-      </Typography>
-      <CardMedia
-        component="img"
-        alt="poster"
-        height="100"
-        image='https://picsum.photos/seed/picsum/200/300'
-      />
-    
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-        </Typography>
-        <PostButton size="small" 
-        fullWidth
-        >POSTAR</PostButton>
-      </CardContent>
-    </Card>
-    </MiniCardPostContainer>
+  const bull = (
+    <Box
+      component="span"
+      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+    >
+      •
+    </Box>
+  );
 
-        
+  return (
+    <MiniCardPostContainer>
+      <Card sx={{ minWidth: 345 }}>
+        <CardContent>
+          <TextField 
+          label="your posts"
+          
+          >
+          </TextField>
+          <ButtonBase >
+          < AddBoxIcon fontSize="large"/>
+          </ButtonBase>
+          
+        </CardContent>
+      </Card>
+    </MiniCardPostContainer>
   );
 };
 

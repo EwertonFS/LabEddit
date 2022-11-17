@@ -7,7 +7,12 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 margin-top:1em;
+height:5em;
+fontSize:1px;
 
+input{
+    width:100%;
+}
 `
 
 export const PostButton = styled.button`

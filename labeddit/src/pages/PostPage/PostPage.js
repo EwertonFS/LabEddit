@@ -1,11 +1,12 @@
 import SearchAppBar from "../../components/AppBar/SearchAppBar";
 import * as React from "react";
 import CreatePostCard from "../../components/Cards/Create/CreatePostCard";
-import { CardContainer } from "./styled";
+import { CardContainer, Container } from "./styled";
 import InteractFeedNews from "../../components/Cards/Feed/InteractFeedNews";
 import { LinearProgress, listItemAvatarClasses } from "@mui/material";
 import axios from 'axios'
 import { useState } from "react";
+import SideBar from "../../components/SideBar/SideBar";
 
 const PostPage = () => {
 
@@ -67,18 +68,24 @@ const PostPage = () => {
   return (
     <>
       <SearchAppBar search={busca} changeSearch={(e)=>setBusca(e.target.value)}/>
-      <input 
+      <Container>
+      <SideBar>
+      {/* <input 
       placeholder='pesquisa'
       value={peaple}
       onChange={(e)=>setPeaple(e.target.value)}
       
       ></input>
       
-      {pessoasFiltradas.map((gentes)=>(<li>{gentes}</li>))}
+      {pessoasFiltradas.map((gentes)=>(<li>{gentes}</li>))} */}
+      </SideBar>
       <CardContainer>
         {/* precisei fazer um map  */}
+        
 
       {isloading && <LinearProgress/>}
+
+        <CreatePostCard/>
         
         { news
         .filter((neo)=>(neo.title?.toString().toLowerCase().includes(busca)))
@@ -87,11 +94,10 @@ const PostPage = () => {
 
           
 
-        {news.map((listing)=>{
-          return <CreatePostCard  post={listing}/>
-        })}
-      </CardContainer>
         
+      </CardContainer>
+      
+      </Container> 
     </>
   );
 };

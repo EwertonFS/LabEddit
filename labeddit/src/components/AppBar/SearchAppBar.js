@@ -13,7 +13,8 @@ import Logo from '../../assets/image/RoboAzulClaro.png'
 import { Link } from 'react-router-dom';
 import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
-
+import TocIcon from "@mui/icons-material/Toc"
+import { ButtonBase } from '@mui/material';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -67,12 +68,15 @@ export default function SearchAppBar(props) {
   
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton>
             <LogoImage src={Logo}></LogoImage>
 
           </IconButton>
+          <ButtonBase>
+          <TocIcon  />
+        </ButtonBase>
           <Typography
             variant="h6"
             noWrap
@@ -90,7 +94,7 @@ export default function SearchAppBar(props) {
               inputProps={{ 'aria-label': 'search' }}
              value={props.search}
              onChange={props.changeSearch}
-              
+              fullWidth
             />
           </Search>
           <Link to={'/login'}>
