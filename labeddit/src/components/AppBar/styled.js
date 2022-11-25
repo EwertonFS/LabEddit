@@ -6,13 +6,11 @@ max-height:50px;
 border-radius:50%;
 
 `
-export const ContainerAppBar = styled.img`
-position:absolute;
+export const ButtonLogin = styled.div`
+font-size:2px;
+
 `
 
-// export const Bars = styled.div`
-// @media screen and (max-width: 390px) {
-    
-// `
+
  
   

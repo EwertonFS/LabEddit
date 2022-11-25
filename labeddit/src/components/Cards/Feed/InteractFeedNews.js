@@ -40,7 +40,6 @@ const InteractFeedNews = (props) => {
  
   return (
     <div>
-      {/* <ul><li>{props.informacao}</li></ul> */}
       <MiniCardFeedContainer>
       <Card sx={{ maxWidth: 345 }}>
       <CardHeader

@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
-import { ContainerSignUpFormPage, InputsContainer } from "./styled";
+import { ContainerSignUpFormPage, InputsContainer, SignUpButton } from "./styled";
 import useForm from "../../hooks/useform";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
@@ -86,6 +86,7 @@ const SignUpFormPage = () => {
               type={"password"}
             />
             <Link to={'/login'}>
+            
             <Button
               type={"submit"}
               fullWidth
@@ -95,6 +96,7 @@ const SignUpFormPage = () => {
             >
               Acessar
             </Button>
+            
             </Link>
           </form>
         </InputsContainer>

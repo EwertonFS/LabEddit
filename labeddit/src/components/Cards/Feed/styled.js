@@ -8,6 +8,16 @@ align-items:center;
 justify-content:center;
 margin-top:1em;
 
+@media screen and (min-device-width : 320px) and (max-device-width :480px){
+height:99%;
+font-size:5px;
+margin-top:1%;
+img{
+    max-height:305px;
+}
+
+
+}
 `
 
 

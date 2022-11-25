@@ -14,20 +14,44 @@ width:13em;
 border: 0,2px solid;
 border-radius:2px;
 
-
+@media screen and (min-device-width : 320px) and (max-device-width :480px){
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    border: 1px solid #cdefff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:2px;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(205,239,255,1) 60%);
+    
+}
 `
 export const SideBarMin = styled.div`
-width:13em;
+width:15em;
 height:95%;
+font-size:small;
 justify-content:start;
 align-items: start;
 border: 1px solid #cdefff;
 padding: 15px;
-margin:3px 10px 3px 0;
+margin:1px 10px 3px 0;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius:2px;
 background: rgb(0,212,255);
-background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(205,239,255,1) 30%);
+background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(205,239,255,1) 82%);
+
+@media screen and (min-device-width : 320px) and (max-device-width :480px){
+    display:flex;
+    flex-direction:column;
+    margin:0px;
+    width:98%;
+    font-size:5%;
+   
+    
+}
+
+
+
 `
 export const MenuIcon = styled.div`
 display:flex;
@@ -89,10 +113,10 @@ margin:3px 10px 3px 0;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius:2px;
 background: rgb(0,212,255);
-background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(205,239,255,1) 60%);
+background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(205,239,255,1) 95%);
 
 button{
-margin-top:10px;
+margin-top:5px;
 }
 
 `
