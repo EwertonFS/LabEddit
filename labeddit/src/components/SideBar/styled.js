@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from "styled-components"
 export const SideBarContainer = styled.div`
 display:flex;
 background-color: #cdefff;
@@ -79,7 +78,7 @@ button{
     
 }
 `
-// SideBar Fechada Mundança//
+ //********************************* */ SideBar Fechada Mundança**************************************//
 
 export const SideBarClosedContainer = styled.div`
 display:flex;

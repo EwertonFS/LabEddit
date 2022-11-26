@@ -4,7 +4,7 @@ import { ContainerSignUpFormPage, InputsContainer, SignUpButton } from "./styled
 import useForm from "../../hooks/useform";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpFormPage = () => {
   const [form, onChange, clear] = useForm({
@@ -13,39 +13,16 @@ const SignUpFormPage = () => {
     password: "",
   });
 
+  let navigate = useNavigate()
   const onSubmitForm = (event) => {
     event.preventDefault();
     // console.log(form);
-    // handleSignup();
-    
+    alert('usuario cadastro com sucesso')
+    navigate('/login')
+    clear()
    };
-  // o body é o form
-
-  const pegaSignuo = () => {
-   
-  
 
 
-  }
-
-  // const handleSignup = () => {
-  // Api com problema
-  //   axios
-  //     .post(`BASE_URL`, form)
-  //     .then((res) => {
-  //       console.log(res);
-  //       // localStorage.setItem("token", res.data.token);
-  //       // alert("Cadastro realizado com sucesso!!")
-  //       // clear()
-  //     })
-  //     .catch((error) => {
-  //       alert("Algo está errado, tente novamente!");
-  //       console.log(error.res);
-  //     });
-
-  //   // .then((res)=> console.log(res))
-  //   // .catch((err)=> console.log(err))
-  // };
 
   return (
     <div>
@@ -85,7 +62,6 @@ const SignUpFormPage = () => {
               required
               type={"password"}
             />
-            <Link to={'/login'}>
             
             <Button
               type={"submit"}
@@ -97,7 +73,6 @@ const SignUpFormPage = () => {
               Acessar
             </Button>
             
-            </Link>
           </form>
         </InputsContainer>
       </ContainerSignUpFormPage>

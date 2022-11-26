@@ -13,17 +13,13 @@ const LoginForm = () => {
   let navigate = useNavigate()
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(form);
+    // console.log(form);
     Login()
     navigate('/')
     
     
   };
 
-  //faremos a requisição agora
-  // axios.post(`${BASE_URL}/users/login`,form)
-  //   .then((res)=> console.log)
-  //   .catch((err)=> console.log)
   const Login = () =>{
     const axios = require("axios");
 
@@ -40,9 +36,13 @@ const LoginForm = () => {
 };
 
 axios.request(options,form).then(function (response) {
-	console.log(response.data);
+	// console.log(response.data);
+  window.localStorage.setItem("token",response.data)
+  alert("Cadastro realizado com sucesso")
+  clear()
 }).catch(function (error) {
 	console.error(error);
+  alert("algo está errado , tente novamente")
 });
   
  

@@ -1,6 +1,7 @@
 //Logica de alteração do tema
 import { createTheme } from "@mui/material/styles";
 
+
 export const theme = createTheme({
   palette: {
     primary: {
@@ -14,7 +15,7 @@ export const theme = createTheme({
     },
     third: {
       main: "#000000",
-      contrastText: "#a8d5e5"
+      contrastText: "#ffffff"
 
     }
   },

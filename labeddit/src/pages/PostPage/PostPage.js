@@ -61,10 +61,6 @@ const PostPage = () => {
       });
   }, [news]);
 
-  //  const handleSearch = (e)=> {
-  //   setBusca(e.target.value)
-
-  //  }
 
   console.log(news);
 

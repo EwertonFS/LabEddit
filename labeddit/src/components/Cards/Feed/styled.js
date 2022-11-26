@@ -9,7 +9,7 @@ justify-content:center;
 margin-top:1em;
 
 @media screen and (min-device-width : 320px) and (max-device-width :480px){
-height:99%;
+height:100%;
 font-size:5px;
 margin-top:1%;
 img{

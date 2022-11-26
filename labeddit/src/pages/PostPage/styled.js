@@ -10,7 +10,7 @@ margin-top:4em;
 
 @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     background-color:#E5ecee; 
-    height:
+    
 }
 `
 

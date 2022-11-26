@@ -64,9 +64,6 @@ export default function SearchAppBar(props) {
           <IconButton>
             <LogoImage src={Logo}></LogoImage>
           </IconButton>
-          {/* <ButtonBase>
-          <TocIcon  />
-        </ButtonBase> */}
           <Typography
             variant="h6"
             noWrap
@@ -91,7 +88,7 @@ export default function SearchAppBar(props) {
           <Link to={"/login"}>
             
             <IconButton size="small">
-              login
+              Login
               <LoginIcon />
             </IconButton>
           </Link>
