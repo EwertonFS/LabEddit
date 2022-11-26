@@ -26,12 +26,17 @@ No entanto a api inicial não estava em pleno funcionamento então recorri a uma
 * Minimamente responsivo para mobile.
 
 ##### home - tela de Posts
-![1](https:/Ewerton/Pictures/Screenshots/Labbedit/repositorio/desktop1.png)
-![2](file:///C:/Users/Ewerton/Pictures/Screenshots/Labbedit/repositorio/desktop2.png)
+![desktop1](https://user-images.githubusercontent.com/94709800/204066485-fa717a87-5141-4865-b61f-4d93dcf0ec12.png)
+![desktop2](https://user-images.githubusercontent.com/94709800/204066497-6c6eaa71-bb7e-4853-a37e-43ff4cd85720.png)
 #### mobile
-![m1](file:///C:/Users/Ewerton/Pictures/Screenshots/Labbedit/repositorio/mobile1.png)
-!
+![mobile1](https://user-images.githubusercontent.com/94709800/204066573-fa275303-6372-4629-90ac-cc1f021bcb2f.png)
+![mobile2](https://user-images.githubusercontent.com/94709800/204066575-f56525be-3221-496b-bc1c-9e2b775b21e4.png)
 ##### login- tela de Login
-![3](file:///C:/Users/Ewerton/Pictures/Screenshots/Labbedit/repositorio/desktop4.png)
+![desktop4](https://user-images.githubusercontent.com/94709800/204066536-f55a8256-7aab-4ab9-b0d5-31e1b0e4ec5a.png)
+#### mobile
+![mobile3](https://user-images.githubusercontent.com/94709800/204066632-b348cbd2-81fa-4815-88bd-3d5893bd3978.png)
 ##### signup- tela de Cadastro
-![4}(file:///C:/Users/Ewerton/Pictures/Screenshots/Labbedit/repositorio/desktop3.png)
+![desktop3](https://user-images.githubusercontent.com/94709800/204066556-848f4cae-7b7a-42fb-8e1f-8db2e54a4a07.png)
+#### mobile
+![mobile4](https://user-images.githubusercontent.com/94709800/204066638-3ac066f1-3780-4304-9f61-7eadf951a673.png)
+  
